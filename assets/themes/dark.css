@@ -1,0 +1,12 @@
+html.dark {
+  --toast-color: #a2a2a2;
+  --text-color: 230, 230, 230;
+  --secondary: 127, 93, 255;
+  --secondary-hex: #7f5dff;
+  --primary: 0, 82, 204;
+  --primary-hex: #0052cc;
+  --selection-color: rgba(127, 93, 255, 0.5);
+  --text-color-primary: rgb(0, 82, 204);
+  --primary-opacity: rgba(0, 82, 204, 0.5);
+  --card-bg: rgba(193, 193, 193, 0.5);
+}

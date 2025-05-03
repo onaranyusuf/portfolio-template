@@ -1,0 +1,12 @@
+html.light {
+  --toast-color: #fdfdfd;
+  --text-color: 65, 65, 65;
+  --secondary: 255, 241, 106;
+  --secondary-hex: #fff16a;
+  --primary: 153, 27, 27;
+  --primary-hex: #ff4066;
+  --selection-color: rgba(255, 241, 106, 0.5);
+  --text-color-primary: rgb(153 27 27 / 1);
+  --primary-opacity: rgba(153, 27, 27, 0.5);
+  --card-bg: rgba(111, 111, 111, 0.5);
+}

@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@import "../themes/dark.css";
+@import "../themes/light.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+::selection {
+  background-color: var(--selection-color);
+}
+.card {
+  box-shadow: 0 8px 32px 0 var(--primary-opacity);
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.card-nav-item {
+  box-shadow: 0 8px 32px 0 var(--primary-opacity);
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.card-nav {
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 32px -10px #bebebe;
+}
+
+.noise {
+  width: 600%;
+  height: 600%;
+  left: -100%;
+  top: -100%;
+  background: url("/assets/images/noise.webp"), #d9d9d9;
+  opacity: 0.5;
+  position: fixed;
+  animation: noiseFX 2s steps(6) infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+html.dark .noise {
+  background: #433535;
+  opacity: 0.25;
+}
+
+.circles {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  position: fixed;
+  pointer-events: none;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  animation: animate 55s linear infinite;
+  bottom: -150px;
+  border-radius: 100%;
+}
+
+.circles li:nth-child(1) {
+  left: -25%;
+  width: 45%;
+  height: 55%;
+  animation-delay: 0s;
+  background: var(--secondary-hex);
+  filter: blur(200px);
+  opacity: 0.85;
+}
+
+.circles li:nth-child(2) {
+  left: 65%;
+  width: 85%;
+  height: 85%;
+  animation-delay: 4s;
+  animation-duration: 52s;
+  background: var(--primary-hex);
+  filter: blur(300px);
+  opacity: 0.75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100vh) rotate(720deg);
+  }
+  100% {
+    transform: translateY(0) rotate(1440deg);
+  }
+}
+
+@keyframes noiseFX {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(3%, -15%);
+  }
+  50% {
+    transform: translate(12%, 9%);
+  }
+  70% {
+    transform: translate(9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
