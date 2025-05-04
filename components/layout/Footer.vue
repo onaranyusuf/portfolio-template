@@ -1,11 +1,10 @@
 <template>
-    <div class="fixed bottom-0 left-0 m-5">
-      <LanguageSelector />
-    </div>
-    <div class="fixed bottom-0 right-0 m-5">
-        <ThemeSelector />
-        
-    </div>
+  <div class="fixed bottom-0 left-0 m-5 z-10">
+    <LanguageSelector />
+  </div>
+  <div class="fixed bottom-0 right-0 m-5 z-10">
+    <ThemeSelector />
+  </div>
 </template>
 
 <script setup lang="ts">
