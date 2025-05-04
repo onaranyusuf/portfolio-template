@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxtjs/i18n", "@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/color-mode", "nuxt-svgo"],
   i18n: {
     defaultLocale: "en",
     langDir: "locales",
@@ -39,4 +39,7 @@ export default defineNuxtConfig({
     preference: "light",
     fallback: "light",
   },
+  svgo: {
+    autoImportPath: './assets/logo/',
+  }
 });
