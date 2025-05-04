@@ -1,9 +1,11 @@
 <template>
-  <div class="fixed bottom-0 left-0 m-5 z-10">
-    <LanguageSelector />
-  </div>
-  <div class="fixed bottom-0 right-0 m-5 z-10">
-    <ThemeSelector />
+  <div>
+    <div class="fixed z-10 md:bottom-0 md:left-0 md:m-5 top-0 left-0 m-5 md:top-auto">
+      <LanguageSelector />
+    </div>
+    <div class="fixed z-10 md:bottom-0 md:right-0 md:m-5 top-0 right-0 m-5 md:top-auto">
+      <ThemeSelector />
+    </div>
   </div>
 </template>
 
