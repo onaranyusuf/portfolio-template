@@ -1,3 +1,6 @@
 {
-  "greeting": "Hello world!"
+  "index": {
+    "greeting": "Hello, i'm Yusuf Onaran",
+    "about": "I'm a Turkish developer with a passion for crafting digital"
+  }
 }

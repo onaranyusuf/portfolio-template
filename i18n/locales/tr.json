@@ -1,3 +1,6 @@
 {
-  "greeting": "Merhaba dünya!"
+  "index": {
+    "greeting": "Merhaba, ben Yusuf Onaran",
+    "about": "Dijital ürünler oluşturma konusunda tutkulu bir Türk geliştiriciyim"
+  }
 }
