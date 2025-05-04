@@ -8,7 +8,12 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  modules: ["@nuxtjs/i18n", "@nuxtjs/color-mode", "nuxt-svgo"],
+  modules: [
+    "@nuxtjs/i18n",
+    "@nuxtjs/color-mode",
+    "nuxt-svgo",
+    "@nuxt/image"
+  ],
   i18n: {
     defaultLocale: "en",
     langDir: "locales",
