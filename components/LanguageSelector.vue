@@ -1,28 +1,26 @@
 <script setup lang="ts">
-const { locale: current, setLocaleCookie } = useI18n();
+const { locale: current, setLocale } = useI18n();
 
-const locales = [
+const locales: { code: "tr" | "en"; name: string }[] = [
   { code: "en", name: "English" },
   { code: "tr", name: "Turkish" },
 ];
-
-const currentLocale = computed(() => {
-  return locales.find((locale) => locale.code === current.value);
-});
-
-watch(current, (newLocale) => {
-  setLocaleCookie(newLocale);
-});
 </script>
 
 <template>
-  <div class="z-99 flex items-center gap-3 rounded-lg px-3 py-1 backdrop-blur-xl card-nav">
+  <div class="overflow-hidden rounded-full bg-white/10 dark:bg-black/10 backdrop-blur-md border border-gray-200/30 dark:border-gray-700/30 shadow-sm flex items-center">
     <ClientOnly>
-      <div v-for="locale in locales" :key="locale" class="cursor-pointer select-none" @click="$i18n.locale = locale.code">
-        <span class="font-semibold" :class="locale.code === currentLocale?.code ? 'text-primary-color' : 'text-primary-color/50'">
-          {{ locale.code }}
-        </span>
-      </div>
+      <button
+        v-for="locale in locales" 
+        :key="locale.code"
+        @click="setLocale(locale.code)"
+        class="px-2.5 py-1 text-xs font-medium transition-colors duration-200 cursor-pointer"
+        :class="locale.code === current 
+          ? 'bg-gray-100/70 dark:bg-gray-500/50 text-gray-800 dark:text-gray-200' 
+          : 'text-gray-400 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'"
+      >
+        {{ locale.code.toUpperCase() }}
+      </button>
     </ClientOnly>
   </div>
 </template>
