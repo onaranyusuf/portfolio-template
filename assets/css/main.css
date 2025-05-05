@@ -5,21 +5,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-::selection {
-  background-color: var(--selection-color);
-}
-.card {
-  box-shadow: 0 8px 32px 0 var(--primary-opacity);
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-.card-nav-item {
-  box-shadow: 0 8px 32px 0 var(--primary-opacity);
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+.text-header {
+  color: rgb(153 27 27);
 }
 
-.card-nav {
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  box-shadow: 0 8px 32px -10px #bebebe;
+.text-header-2 {
+  color: rgb(194, 85, 85);
 }
 
 .noise {
@@ -113,4 +104,19 @@ html.dark .noise {
   90% {
     transform: translate(-1%, 7%);
   }
+}
+
+.card {
+  box-shadow: 0 8px 32px 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-nav-item {
+  box-shadow: 0 4px 16px 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-nav {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px -10px #bebebe;
 }
