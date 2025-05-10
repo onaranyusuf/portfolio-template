@@ -1,6 +1,16 @@
 {
   "index": {
     "greeting": "Merhaba, ben Yusuf Onaran",
-    "about": "Dijital ürünler oluşturma konusunda tutkulu bir Türk geliştiriciyim"
+    "about": "Dijital ürünler oluşturma konusunda tutkulu bir geliştiriciyim"
+  },
+  "contact": {
+    "title": "İletişim",
+    "header": "Benimle iletişime geçmek isterseniz, lütfen bir mesaj bırakın.",
+    "name": "adınız",
+    "email": "e-posta adresiniz",
+    "message": "mesajınız",
+    "send": "Gönder",
+    "success": "Mesaj başarıyla gönderildi",
+    "error": "Mesaj gönderimi başarısız oldu!"
   }
 }

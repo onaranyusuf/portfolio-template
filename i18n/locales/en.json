@@ -1,6 +1,16 @@
 {
   "index": {
     "greeting": "Hello, i'm Yusuf Onaran",
-    "about": "I'm a Turkish developer with a passion for crafting digital"
+    "about": "I'm a developer with a passion for crafting digital"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "header": "If you want to contact me, please drop me a message.",
+    "name": "full name",
+    "email": "e-mail address",
+    "message": "message",
+    "send": "Send",
+    "success": "Message sent successfully",
+    "error": "Message sent failed!"
   }
 }
