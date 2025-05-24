@@ -12,5 +12,9 @@
     "send": "Gönder",
     "success": "Mesaj başarıyla gönderildi",
     "error": "Mesaj gönderimi başarısız oldu!"
+  },
+  "projects": {
+    "title": "Projeler",
+    "header": "Bazı projelere göz atabilirsiniz"
   }
 }

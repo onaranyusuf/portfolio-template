@@ -12,5 +12,9 @@
     "send": "Send",
     "success": "Message sent successfully",
     "error": "Message sent failed!"
+  },
+  "projects": {
+    "title": "Projects",
+    "header": "Here are some of my projects"
   }
 }
