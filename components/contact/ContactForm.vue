@@ -1,8 +1,8 @@
 <template>
   <div class="contact-container">
-    <h1 class="header">
+    <h2 class="header">
       {{ t("contact.header") }}
-    </h1>
+    </h2>
     <form @submit.prevent="submitForm" class="contact-form">
       <div class="form-group font-mono">
         <input

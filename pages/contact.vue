@@ -29,7 +29,7 @@ const { t } = useI18n();
 }
 
 .main-div {
-  @apply w-full pt-16 md:pt-30 mt-6 transition-colors duration-300 relative z-1;
+  @apply w-full pt-16 md:pt-24 mt-6 transition-colors duration-300 relative z-1;
 }
 
 .title {
