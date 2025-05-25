@@ -13,8 +13,17 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-svgo",
     "@nuxt/image",
-    "@nuxt/icon"
+    "@nuxt/icon",
+    "nuxt-gtag"
   ],
+
+  gtag: {
+    id: process.env.VITE_GA_ID,
+    config: {
+      send_page_view: true
+    },
+  },
+
   i18n: {
     defaultLocale: "en",
     langDir: "locales",
