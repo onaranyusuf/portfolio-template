@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/color-mode",
     "nuxt-svgo",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxt/icon"
   ],
   i18n: {
     defaultLocale: "en",
