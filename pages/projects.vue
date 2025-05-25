@@ -27,7 +27,7 @@ const projects = [
 {
     name: "Yusuf Onaran",
     image: "/assets/yusuf-web.webp",
-    link: "#",
+    link: "/",
   },
   {
     name: "LyricsFinder - Translate",
@@ -56,7 +56,7 @@ const projects = [
 </script>
 
 <style scoped>
-@reference "~/assets/css/main.css";
+@import "@/assets/css/main.css";
 @font-face {
   font-family: "Acorn";
   src: url("/assets/fonts/Acorn/Acorn-Bold.woff2") format("woff2");

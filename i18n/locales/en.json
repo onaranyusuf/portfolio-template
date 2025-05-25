@@ -16,5 +16,16 @@
   "projects": {
     "title": "Projects",
     "header": "Here are some of my projects"
+  },
+  "about": {
+    "title": "About Me",
+    "header": "Hi, I'm Yusuf, \n\nFor me, code is more than just syntax; it’s a creative process. I enjoy imagining ideas, experimenting with technologies, and turning concepts into real, interactive experiences. Every project is a new opportunity to grow and push the boundaries of what I can create.\n\nThis site is a window into my work — past, present, and what's yet to come.",
+    "tech": {
+      "title": "Tech Stack"
+    }
+  },
+  "error": {
+    "title": "Page Not Found",
+    "btn": "Go to Home"
   }
 }

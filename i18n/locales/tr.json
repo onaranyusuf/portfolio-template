@@ -16,5 +16,16 @@
   "projects": {
     "title": "Projeler",
     "header": "Bazı projelere göz atabilirsiniz"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "header": "Merhaba, ben Yusuf, \n\nKod benim için sadece syntax'an ibaret değil; aynı zamanda yaratıcı bir süreç. Fikirler hayal etmeyi, teknolojilerle denemeler yapmayı ve kavramları gerçek, etkileşimli deneyimlere dönüştürmeyi seviyorum. Her proje, kendimi geliştirmek ve yaratıcılığımın sınırlarını zorlamak için yeni bir fırsat.\n\nBu site, yaptığım işlere bir pencere — geçmişe, bugüne ve henüz ortaya çıkmamış olanlara.",
+    "tech": {
+      "title": "Tech Stack"
+    }
+  },
+  "error": {
+    "title": "Sayfa Bulunamadı",
+    "btn": "Ana Sayfaya Git"
   }
 }
