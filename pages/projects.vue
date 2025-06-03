@@ -30,6 +30,11 @@ const projects = [
     link: "/",
   },
   {
+    name: "Olympos Vita Nova Hotel",
+    image: "/assets/vita_nova.webp",
+    link: "https://olymposvitanovahotel.com/",
+  },
+  {
     name: "LyricsFinder - Translate",
     image: "/assets/lyrics-finder.webp",
     link: "https://lyrics-translator.netlify.app/",
@@ -49,8 +54,6 @@ const projects = [
     image: "/assets/weather.webp",
     link: "https://weather-yo.netlify.app/",
   },
-  
-  
   
 ];
 </script>
