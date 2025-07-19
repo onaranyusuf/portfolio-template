@@ -14,8 +14,56 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@nuxt/image",
     "@nuxt/icon",
-    "nuxt-gtag"
+    "nuxt-gtag",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots"
   ],
+
+  site: {
+    url: "https://yusufonaran.com",
+    name: "Yusuf Onaran ",
+    description: "Yusuf Onaran's personal website"
+  },
+
+  sitemap: {
+    defaults: {
+      changefreq: 'monthly',
+      priority: 0.7,
+      lastmod: new Date().toISOString()
+    },
+    urls: [
+      {
+        loc: '/',
+        changefreq: 'monthly', 
+        priority: 0.9,
+        lastmod: '2025-07-19',
+      },
+      {
+        loc: '/about',
+        changefreq: 'yearly',
+        priority: 0.8,
+        lastmod: '2025-07-19',
+      },
+      {
+        loc: '/projects',
+        changefreq: 'monthly',
+        priority: 0.9,
+        lastmod: '2025-07-19',
+      },
+      {
+        loc: '/contact',
+        changefreq: 'yearly',
+        priority: 0.7,
+        lastmod: '2025-07-19',
+      }
+    ],
+    xslColumns: [
+      { label: 'URL', width: '50%' },
+      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
+      { label: 'Priority', select: 'sitemap:priority', width: '12.5%' },
+      { label: 'Change Frequency', select: 'sitemap:changefreq', width: '12.5%' },
+    ],
+  },
 
   gtag: {
     id: process.env.VITE_GA_ID,
