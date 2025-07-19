@@ -13,7 +13,7 @@
         v-for="project in projects"
         :key="project.name"
         :item="project"
-        class="w-10/12 md:w-11/12 p-4 cursor-pointer mt-8 transform hover:scale-105 transition duration-300 ease-in-out"
+        class="w-10/12 md:w-11/12 p-4 mt-8 transform hover:scale-105 transition duration-300 ease-in-out"
       />
     </div>
   </div>
@@ -24,10 +24,11 @@ import Project from "~/components/projects/Project.vue";
 const { t } = useI18n();
 
 const projects = [
-{
+  {
     name: "Yusuf Onaran",
     image: "/assets/yusuf-web.webp",
-    link: "/",
+    link: "https://yusufonaran.com/",
+    github: "https://github.com/onaranyusuf/portfolio-template",
   },
   {
     name: "Olympos Vita Nova Hotel",
@@ -38,23 +39,26 @@ const projects = [
     name: "LyricsFinder - Translate",
     image: "/assets/lyrics-finder.webp",
     link: "https://lyrics-translator.netlify.app/",
+    github: "https://github.com/onaranyusuf/lyrics-finder",
   },
   {
     name: "BTC Wallet Tracker",
     image: "/assets/bitcoin-wallet-tracker.webp",
     link: "https://bitcoin-wallet-tracker.netlify.app/",
+    github: "https://github.com/onaranyusuf/btc-wallet-tracker",
   },
   {
     name: "Gemini Clone",
     image: "/assets/gemini-clone.webp",
     link: "https://gemini-yo.netlify.app/",
+    github: "https://github.com/onaranyusuf/geminiclone",
   },
   {
     name: "Weather App",
     image: "/assets/weather.webp",
     link: "https://weather-yo.netlify.app/",
+    github: "https://github.com/onaranyusuf/havadurumuapi",
   },
-  
 ];
 </script>
 
