@@ -41,7 +41,7 @@ const items = [
     { name: 'Home', path: '/', icon: HomeIcon },
     { name: 'Projects', path: '/projects', icon: PencilIcon },
     { name: 'About', path: '/about', icon: UserIcon },
-    { name: 'Contact', path: '/contact', icon: EnvelopeIcon },
+    /*{ name: 'Contact', path: '/contact', icon: EnvelopeIcon },*/
 ]
 
 const route = useRoute()
