@@ -38,8 +38,13 @@ useSeoMeta({
   description:
     "Yusuf Onaran is a passionate fullstack developer specializing in Vue.js, Nuxt.js, React, and modern web technologies. Creating digital experiences with clean code.",
   keywords:
-    "Yusuf Onaran, Fullstack Developer, Vue.js, Nuxt.js, React, TypeScript, JavaScript, Node.js, Web Developer",
+    "Yusuf Onaran, Onaran Yusuf, Onaran, onaranyusuf, yusufonaran, Fullstack Developer, Vue.js, Nuxt.js, React, TypeScript, JavaScript, Node.js, Web Developer",
   author: "Yusuf Onaran",
+  ogImage: "/og.png",
+  ogImageWidth: "1200",
+  ogImageHeight: "630",
+  twitterCard: "summary_large_image",
+  twitterImage: "/og.png"
 });
 
 useSchemaOrg([
@@ -52,11 +57,6 @@ useSchemaOrg([
     inLanguage: "en-US",
   }),
 ]);
-
-defineOgImageComponent("Template", {
-  title: "Yusuf Onaran",
-  description: "Full Stack Developer",
-});
 </script>
 
 <style scoped>

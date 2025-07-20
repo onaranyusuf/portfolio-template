@@ -78,11 +78,6 @@ useSchemaOrg([
     inLanguage: "en-US"
   })
 ])
-
-defineOgImageComponent('Template', {
-  title: 'Yusuf Onaran',
-  description: 'Projects'
-})
 </script>
 
 <style scoped>
