@@ -8,7 +8,7 @@ withDefaults(
   {
     title: "Yusuf Onaran",
     description: "Full Stack Developer",
-    avatar: "/assets/yusuf.webp",
+    avatar: "/assets/yusuf.PNG",
   }
 );
 </script>
