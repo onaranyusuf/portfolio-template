@@ -23,7 +23,6 @@
     "@vercel/speed-insights": "^1.2.0",
     "nuxt": "^3.17.1",
     "nuxt-gtag": "^3.0.2",
-    "nuxt-og-image": "^5.1.9",
     "nuxt-schema-org": "^5.0.6",
     "nuxt-svgo": "^4.1.0",
     "tailwindcss": "^4.1.5",
