@@ -65,7 +65,7 @@ withDefaults(
         class="w-52 rounded-full object-cover"
       />
       <h1 class="text-6xl font-bold mb-6 text-gray-100">{{ title }}</h1>
-      <p class="text-3xl text-gray-300">{{ description }}</p>
+      <p class="text-4xl text-gray-300">{{ description }}</p>
     </div>
   </div>
 </template>

@@ -13,6 +13,12 @@ import ContactForm from "~/components/contact/ContactForm.vue";
 import GS from "~/assets/images/gs.webp";
 
 const { t } = useI18n();
+
+defineOgImageComponent('Template', {
+  title: 'Yusuf Onaran',
+  description: 'Contact Me'
+})
+
 </script>
 
 <style scoped>

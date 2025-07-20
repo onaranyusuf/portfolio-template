@@ -1,8 +1,8 @@
 <template>
   <div class="head-div mb-12">
-    <h1 class="title acorn text-header">
+    <h2 class="title acorn text-header">
       {{ t("about.tech.title") }}
-    </h1>
+    </h2>
 
     <div class="group">
       <div class="logos-viewport mask">

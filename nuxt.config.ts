@@ -17,13 +17,48 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
-    "nuxt-og-image"
+    "nuxt-og-image",
+    "nuxt-schema-org"
   ],
 
   site: {
     url: "https://yusufonaran.com",
-    name: "Yusuf Onaran ",
-    description: "Yusuf Onaran's personal website"
+    name: "Yusuf Onaran",
+    description: "Yusuf Onaran – Fullstack Developer"
+  },
+
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+        { rel: 'apple-touch-icon', sizes: '192x192', href: '/android-chrome-192x192.png' },
+      ]
+    }
+  },
+
+  schemaOrg: {
+    identity: {
+      type: 'Person',
+      name: 'Yusuf Onaran',
+      url: 'https://yusufonaran.com',
+      image: '/assets/yusuf.png',
+      jobTitle: 'Fullstack Developer',
+      description: 'Fullstack Developer with a passion for crafting digital experiences',
+      knowsAbout: [
+        "Vue.js",
+        "Nuxt.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Tailwind CSS"
+      ],
+      sameAs: [
+        'https://github.com/onaranyusuf',
+        'https://www.linkedin.com/in/yusufonaran/'
+      ]
+    }
   },
 
   sitemap: {

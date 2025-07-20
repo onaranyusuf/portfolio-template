@@ -14,9 +14,9 @@
       </div>
       <div class="w-full mb-10">
         <div>
-          <h3 class="text-color-text font-medium text-start px-8 mb-8 whitespace-pre-line">
+          <p class="text-color-text font-medium text-start px-8 mb-8 whitespace-pre-line">
             {{ t("about.header") }}
-          </h3>
+          </p>
         </div>
         <Tech />
       </div>
@@ -25,11 +25,11 @@
     <div class="w-full flex-row justify-between hidden lg:flex">
       <div class="w-[65%] my-5 lg:my-10">
         <div>
-          <h3
+          <p
             class="text-color-text font-medium text-start px-20 lg:px-32 pt-5 whitespace-pre-line"
           >
             {{ t("about.header") }}
-          </h3>
+          </p>
         </div>
         <Tech />
 
@@ -40,7 +40,7 @@
             loading="lazy"
             class="rounded-bl-lg rounded-tl-lg w-full h-fit object-cover z-20"
             src="/assets/yusuf.png"
-            alt="Yusuf - Web Developer Portrait Photo"
+            alt="Yusuf - Fullstack Developer Portrait Photo"
           />
         </div>
       </div>
@@ -51,6 +51,27 @@
 <script setup lang="ts">
 import Tech from "~/components/about/Tech.vue";
 const { t } = useI18n();
+
+useSeoMeta({
+  title:       'About – Yusuf Onaran | Fullstack Developer',
+  description: 'Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.',
+  author:      'Yusuf Onaran'
+})
+
+useSchemaOrg([  
+  defineWebPage({
+    "@type":       'WebPage',
+    name:       'About – Yusuf Onaran',
+    description: 'Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.',
+    url:        'https://yusufonaran.com/about',
+    inLanguage: 'en-US'
+  })
+])
+
+defineOgImageComponent('Template', {
+  title: 'Yusuf Onaran',
+  description: 'About Me'
+})
 </script>
 
 <style scoped>

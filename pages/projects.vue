@@ -60,6 +60,29 @@ const projects = [
     github: "https://github.com/onaranyusuf/havadurumuapi",
   },
 ];
+
+useSeoMeta({
+  title: "Projects – Yusuf Onaran | Fullstack Developer",
+  description:
+    "A curated showcase of web applications and digital experiences by Yusuf Onaran, Fullstack Developer.",
+  author: "Yusuf Onaran"
+})
+
+useSchemaOrg([
+  defineWebPage({
+    "@type":       "CollectionPage",
+    name:       "Projects – Yusuf Onaran",
+    description:
+      "A curated collection of web applications and digital experiences by fullstack developer Yusuf Onaran.",
+    url:        "https://yusufonaran.com/projects",
+    inLanguage: "en-US"
+  })
+])
+
+defineOgImageComponent('Template', {
+  title: 'Yusuf Onaran',
+  description: 'Projects'
+})
 </script>
 
 <style scoped>
