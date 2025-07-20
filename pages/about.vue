@@ -8,7 +8,7 @@
         <NuxtImg
           loading="lazy"
           class="rounded-lg w-full object-cover z-20"
-          src="/assets/yusuf.png"
+          src="/assets/yusuf.webp"
           alt="Yusuf - Web Developer Portrait Photo"
         />
       </div>
@@ -39,7 +39,7 @@
           <NuxtImg
             loading="lazy"
             class="rounded-bl-lg rounded-tl-lg w-full h-fit object-cover z-20"
-            src="/assets/yusuf.png"
+            src="/assets/yusuf.webp"
             alt="Yusuf - Fullstack Developer Portrait Photo"
           />
         </div>

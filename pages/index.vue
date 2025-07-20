@@ -6,7 +6,7 @@
       <NuxtImg
         loading="lazy"
         class="rounded-full h-28 w-28 object-cover"
-        src="/assets/yusuf.png"
+        src="/assets/yusuf.webp"
         alt="Yusuf - Web Developer Portrait Photo"
       />
     </div>

@@ -43,7 +43,7 @@ export default defineNuxtConfig({
       type: 'Person',
       name: 'Yusuf Onaran',
       url: 'https://yusufonaran.com',
-      image: '/assets/yusuf.png',
+      image: '/assets/yusuf.webp',
       jobTitle: 'Fullstack Developer',
       description: 'Fullstack Developer with a passion for crafting digital experiences',
       knowsAbout: [
