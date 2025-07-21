@@ -78,25 +78,25 @@ export default defineNuxtConfig({
         loc: '/',
         changefreq: 'monthly', 
         priority: 0.9,
-        lastmod: '2025-07-19',
+        lastmod: '2025-07-21',
       },
       {
         loc: '/about',
         changefreq: 'yearly',
         priority: 0.8,
-        lastmod: '2025-07-19',
+        lastmod: '2025-07-21',
       },
       {
         loc: '/projects',
         changefreq: 'monthly',
         priority: 0.9,
-        lastmod: '2025-07-19',
+        lastmod: '2025-07-21',
       },
       {
         loc: '/contact',
         changefreq: 'yearly',
         priority: 0.7,
-        lastmod: '2025-07-19',
+        lastmod: '2025-07-21',
       }
     ],
     xslColumns: [
