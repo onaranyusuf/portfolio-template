@@ -14,6 +14,35 @@ import GS from "~/assets/images/gs.webp";
 
 const { t } = useI18n();
 
+useSeoMeta({
+  title: "Contact – Yusuf Onaran | Fullstack Developer",
+  description: "Contact with Yusuf Onaran.",
+  author: "Yusuf Onaran"
+})
+
+const schemaContactPage = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact – Yusuf Onaran",
+  "description": "Contact with Yusuf Onaran.",
+  "url": "https://www.yusufonaran.com/contact",
+  "inLanguage": "en-US"
+}
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://www.yusufonaran.com/contact"
+    }
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(schemaContactPage)
+    }
+  ]
+})
 </script>
 
 <style scoped>

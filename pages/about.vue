@@ -63,6 +63,7 @@ useSeoMeta({
 const schema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
+  "@id": "https://www.yusufonaran.com/about",
   name: "About – Yusuf Onaran",
   description:
     "Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.",

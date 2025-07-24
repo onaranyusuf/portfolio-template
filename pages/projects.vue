@@ -68,16 +68,29 @@ useSeoMeta({
   author: "Yusuf Onaran"
 })
 
-useSchemaOrg([
-  defineWebPage({
-    "@type":       "CollectionPage",
-    name:       "Projects – Yusuf Onaran",
-    description:
-      "A curated collection of web applications and digital experiences by fullstack developer Yusuf Onaran.",
-    url:        "https://www.yusufonaran.com/projects",
-    inLanguage: "en-US"
-  })
-])
+const schemaCollectionPage = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Projects – Yusuf Onaran",
+  "description": "A curated collection of web applications and digital experiences by fullstack developer Yusuf Onaran.",
+  "url": "https://www.yusufonaran.com/projects",
+  "inLanguage": "en-US"
+}
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://www.yusufonaran.com/projects"
+    }
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(schemaCollectionPage)
+    }
+  ]
+})
 </script>
 
 <style scoped>

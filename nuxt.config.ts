@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-gtag",
     "@nuxtjs/sitemap",
-    "@nuxtjs/robots",
     "nuxt-schema-org"
   ],
 
@@ -49,27 +48,6 @@ export default defineNuxtConfig({
     }
   },
 
-  schemaOrg: {
-    identity: {
-      type: 'Person',
-      name: 'Yusuf Onaran',
-      url: 'https://www.yusufonaran.com',
-      jobTitle: 'Fullstack Developer',
-      description: 'Fullstack Developer with a passion for crafting digital experiences',
-      knowsAbout: [
-        "Vue.js",
-        "Nuxt.js",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Tailwind CSS"
-      ],
-      sameAs: [
-        'https://github.com/onaranyusuf',
-        'https://www.linkedin.com/in/yusufonaran/'
-      ]
-    }
-  },
 
   sitemap: {
     defaults: {

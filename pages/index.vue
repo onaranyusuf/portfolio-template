@@ -44,19 +44,70 @@ useSeoMeta({
   ogImageWidth: "1200",
   ogImageHeight: "630",
   twitterCard: "summary_large_image",
-  twitterImage: "https://www.yusufonaran.com/og.png"
+  twitterImage: "https://www.yusufonaran.com/og.png",
 });
 
-useSchemaOrg([
-  defineWebPage({
-    "@type": "WebPage",
-    name: "Yusuf Onaran – Fullstack Developer",
-    description:
-      "Yusuf Onaran is a passionate fullstack developer specializing in Vue.js, Nuxt.js, React, and modern web technologies.",
-    url: "https://www.yusufonaran.com",
-    inLanguage: "en-US",
-  }),
-]);
+const schemaPerson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Yusuf Onaran",
+  url: "https://www.yusufonaran.com",
+  jobTitle: "Fullstack Developer",
+  description:
+    "Fullstack Developer with a passion for crafting digital experiences",
+  knowsAbout: [
+    "Vue.js",
+    "Nuxt.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Tailwind CSS",
+  ],
+  sameAs: [
+    "https://github.com/onaranyusuf",
+    "https://www.linkedin.com/in/yusufonaran/",
+  ],
+};
+
+const schemaWebPage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Yusuf Onaran – Fullstack Developer",
+  description:
+    "Yusuf Onaran is a passionate fullstack developer specializing in Vue.js, Nuxt.js, React, and modern web technologies.",
+  url: "https://www.yusufonaran.com",
+  inLanguage: "en-US",
+};
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://www.yusufonaran.com",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(schemaPerson),
+    },
+  ],
+});
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://www.yusufonaran.com",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(schemaWebPage),
+    },
+  ],
+});
 </script>
 
 <style scoped>
