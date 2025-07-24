@@ -63,7 +63,7 @@ useSchemaOrg([
     "@type":       'WebPage',
     name:       'About – Yusuf Onaran',
     description: 'Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.',
-    url:        'https://yusufonaran.com/about',
+    url:        'https://www.yusufonaran.com/about',
     inLanguage: 'en-US'
   })
 ])

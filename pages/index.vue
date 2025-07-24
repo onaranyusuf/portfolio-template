@@ -40,11 +40,11 @@ useSeoMeta({
   keywords:
     "Yusuf Onaran, Onaran Yusuf, Onaran, onaranyusuf, yusufonaran, onaran, Fullstack Developer, Vue.js, Nuxt.js, React, TypeScript, JavaScript, Node.js, Web Developer",
   author: "Yusuf Onaran",
-  ogImage: "https://yusufonaran.com/og.png",
+  ogImage: "https://www.yusufonaran.com/og.png",
   ogImageWidth: "1200",
   ogImageHeight: "630",
   twitterCard: "summary_large_image",
-  twitterImage: "https://yusufonaran.com/og.png"
+  twitterImage: "https://www.yusufonaran.com/og.png"
 });
 
 useSchemaOrg([
@@ -53,7 +53,7 @@ useSchemaOrg([
     name: "Yusuf Onaran – Fullstack Developer",
     description:
       "Yusuf Onaran is a passionate fullstack developer specializing in Vue.js, Nuxt.js, React, and modern web technologies.",
-    url: "https://yusufonaran.com",
+    url: "https://www.yusufonaran.com",
     inLanguage: "en-US",
   }),
 ]);
