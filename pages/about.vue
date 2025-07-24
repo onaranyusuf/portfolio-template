@@ -14,7 +14,9 @@
       </div>
       <div class="w-full mb-10">
         <div>
-          <p class="text-color-text font-medium text-start px-8 mb-8 whitespace-pre-line">
+          <p
+            class="text-color-text font-medium text-start px-8 mb-8 whitespace-pre-line"
+          >
             {{ t("about.header") }}
           </p>
         </div>
@@ -32,7 +34,6 @@
           </p>
         </div>
         <Tech />
-
       </div>
       <div class="w-[30%] my-10">
         <div class="rounded-bl-lg rounded-tl-lg card-img p-5 pr-0">
@@ -53,20 +54,36 @@ import Tech from "~/components/about/Tech.vue";
 const { t } = useI18n();
 
 useSeoMeta({
-  title:       'About – Yusuf Onaran | Fullstack Developer',
-  description: 'Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.',
-  author:      'Yusuf Onaran'
-})
+  title: "About – Yusuf Onaran | Fullstack Developer",
+  description:
+    "Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.",
+  author: "Yusuf Onaran",
+});
 
-useSchemaOrg([  
-  defineWebPage({
-    "@type":       'WebPage',
-    name:       'About – Yusuf Onaran',
-    description: 'Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.',
-    url:        'https://www.yusufonaran.com/about',
-    inLanguage: 'en-US'
-  })
-])
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "About – Yusuf Onaran",
+  description:
+    "Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.",
+  url: "https://www.yusufonaran.com/about",
+  inLanguage: "en-US",
+};
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: "https://www.yusufonaran.com/about",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(schema),
+    },
+  ],
+});
 </script>
 
 <style scoped>
@@ -95,7 +112,7 @@ useSchemaOrg([
 }
 
 .card-img {
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 var(--card-bg);
   border-right: none;
 }
