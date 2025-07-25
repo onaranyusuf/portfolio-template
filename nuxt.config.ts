@@ -60,7 +60,7 @@ export default defineNuxtConfig({
         loc: '/',
         changefreq: 'monthly', 
         priority: 0.9,
-        lastmod: '2025-07-21',
+        lastmod: '2025-07-25',
       },
       {
         loc: '/about',
@@ -80,12 +80,6 @@ export default defineNuxtConfig({
         priority: 0.7,
         lastmod: '2025-07-21',
       }
-    ],
-    xslColumns: [
-      { label: 'URL', width: '50%' },
-      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
-      { label: 'Priority', select: 'sitemap:priority', width: '12.5%' },
-      { label: 'Change Frequency', select: 'sitemap:changefreq', width: '12.5%' },
     ],
   },
 

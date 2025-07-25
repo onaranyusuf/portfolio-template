@@ -85,6 +85,13 @@ useHead({
       rel: "canonical",
       href: "https://www.yusufonaran.com",
     },
+    {
+      rel: "icon",
+      href: "/favicon.ico",
+    },
+    {
+      rel: "icon",
+    },
   ],
   script: [
     {
@@ -99,6 +106,13 @@ useHead({
     {
       rel: "canonical",
       href: "https://www.yusufonaran.com",
+    },
+    {
+      rel: "icon",
+      href: "/favicon.ico",
+    },
+    {
+      rel: "icon",
     },
   ],
   script: [
