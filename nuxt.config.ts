@@ -52,34 +52,9 @@ export default defineNuxtConfig({
   sitemap: {
     defaults: {
       changefreq: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
+      lastmod: new Date().toISOString(),
     },
-    urls: [
-      {
-        loc: '/',
-        changefreq: 'monthly', 
-        priority: 0.9,
-        lastmod: '2025-08-06T00:00:00.000Z',
-      },
-      {
-        loc: '/about',
-        changefreq: 'yearly',
-        priority: 0.8,
-        lastmod: '2025-07-21T00:00:00.000Z',
-      },
-      {
-        loc: '/projects',
-        changefreq: 'monthly',
-        priority: 0.9,
-        lastmod: '2025-07-21T00:00:00.000Z',
-      },
-      {
-        loc: '/contact',
-        changefreq: 'yearly',
-        priority: 0.7,
-        lastmod: '2025-07-21T00:00:00.000Z',
-      }
-    ],
   },
 
   gtag: {
