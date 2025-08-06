@@ -40,18 +40,18 @@ useSeoMeta({
   keywords:
     "Yusuf Onaran, Onaran Yusuf, Onaran, onaranyusuf, yusufonaran, onaran, Fullstack Developer, Vue.js, Nuxt.js, React, TypeScript, JavaScript, Node.js, Web Developer",
   author: "Yusuf Onaran",
-  ogImage: "https://www.yusufonaran.com/og.png",
+  ogImage: "https://yusufonaran.com/og.png",
   ogImageWidth: "1200",
   ogImageHeight: "630",
   twitterCard: "summary_large_image",
-  twitterImage: "https://www.yusufonaran.com/og.png",
+  twitterImage: "https://yusufonaran.com/og.png",
 });
 
 const schemaPerson = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Yusuf Onaran",
-  url: "https://www.yusufonaran.com",
+  url: "https://yusufonaran.com",
   jobTitle: "Fullstack Developer",
   description:
     "Fullstack Developer with a passion for crafting digital experiences",
@@ -75,7 +75,7 @@ const schemaWebPage = {
   name: "Yusuf Onaran – Fullstack Developer",
   description:
     "Yusuf Onaran is a passionate fullstack developer specializing in Vue.js, Nuxt.js, React, and modern web technologies.",
-  url: "https://www.yusufonaran.com",
+  url: "https://yusufonaran.com",
   inLanguage: "en-US",
 };
 
@@ -83,7 +83,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://www.yusufonaran.com",
+      href: "https://yusufonaran.com",
     },
     {
       rel: "icon",
@@ -105,7 +105,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://www.yusufonaran.com",
+      href: "https://yusufonaran.com",
     },
     {
       rel: "icon",

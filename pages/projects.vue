@@ -27,7 +27,7 @@ const projects = [
   {
     name: "Yusuf Onaran",
     image: "/assets/yusuf-web.webp",
-    link: "https://www.yusufonaran.com/",
+    link: "https://yusufonaran.com/",
     github: "https://github.com/onaranyusuf/portfolio-template",
   },
   {
@@ -73,7 +73,7 @@ const schemaCollectionPage = {
   "@type": "CollectionPage",
   "name": "Projects – Yusuf Onaran",
   "description": "A curated collection of web applications and digital experiences by fullstack developer Yusuf Onaran.",
-  "url": "https://www.yusufonaran.com/projects",
+  "url": "https://yusufonaran.com/projects",
   "inLanguage": "en-US"
 }
 
@@ -81,7 +81,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://www.yusufonaran.com/projects"
+      href: "https://yusufonaran.com/projects"
     }
   ],
   script: [

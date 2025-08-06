@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: "https://www.yusufonaran.com",
+    url: "https://yusufonaran.com",
     name: "Yusuf Onaran",
     description: "Yusuf Onaran – Fullstack Developer"
   },
@@ -31,13 +31,13 @@ export default defineNuxtConfig({
       meta: [
         { property: 'og:title', content: 'Yusuf Onaran – Fullstack Developer' },
         { property: 'og:site_name', content: 'Yusuf Onaran' },
-        { property: 'og:image', content: 'https://www.yusufonaran.com/og.png' },
+        { property: 'og:image', content: 'https://yusufonaran.com/og.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Yusuf Onaran' },
         { name: 'twitter:description', content: 'Fullstack Developer' },
-        { name: 'twitter:image', content: 'https://www.yusufonaran.com/og.png' },
+        { name: 'twitter:image', content: 'https://yusufonaran.com/og.png' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -53,32 +53,31 @@ export default defineNuxtConfig({
     defaults: {
       changefreq: 'monthly',
       priority: 0.7,
-      lastmod: new Date().toISOString()
     },
     urls: [
       {
         loc: '/',
         changefreq: 'monthly', 
         priority: 0.9,
-        lastmod: '2025-07-25',
+        lastmod: '2025-08-06T00:00:00.000Z',
       },
       {
         loc: '/about',
         changefreq: 'yearly',
         priority: 0.8,
-        lastmod: '2025-07-21',
+        lastmod: '2025-07-21T00:00:00.000Z',
       },
       {
         loc: '/projects',
         changefreq: 'monthly',
         priority: 0.9,
-        lastmod: '2025-07-21',
+        lastmod: '2025-07-21T00:00:00.000Z',
       },
       {
         loc: '/contact',
         changefreq: 'yearly',
         priority: 0.7,
-        lastmod: '2025-07-21',
+        lastmod: '2025-07-21T00:00:00.000Z',
       }
     ],
   },

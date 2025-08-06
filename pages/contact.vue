@@ -25,7 +25,7 @@ const schemaContactPage = {
   "@type": "ContactPage",
   "name": "Contact – Yusuf Onaran",
   "description": "Contact with Yusuf Onaran.",
-  "url": "https://www.yusufonaran.com/contact",
+  "url": "https://yusufonaran.com/contact",
   "inLanguage": "en-US"
 }
 
@@ -33,7 +33,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://www.yusufonaran.com/contact"
+      href: "https://yusufonaran.com/contact"
     }
   ],
   script: [
