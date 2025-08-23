@@ -16,8 +16,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/icon",
     "nuxt-gtag",
-    "@nuxtjs/sitemap",
-    "nuxt-schema-org"
+    "nuxt-schema-org",
+    "./modules/sitemap"
   ],
 
   site: {
@@ -46,15 +46,6 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '192x192', href: '/android-chrome-192x192.png' },
       ]
     }
-  },
-
-
-  sitemap: {
-    defaults: {
-      changefreq: 'monthly',
-      priority: 0.8,
-      lastmod: new Date().toISOString(),
-    },
   },
 
   gtag: {
