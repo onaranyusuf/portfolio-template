@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-gtag",
     "nuxt-schema-org",
-    "./modules/sitemap"
+    "./modules/sitemap",
+    "@vercel/speed-insights/nuxt"
   ],
 
   site: {
