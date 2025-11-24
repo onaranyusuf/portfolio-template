@@ -1,0 +1,29 @@
+{
+  "headers": [
+    {
+      "source": "/_vercel/image",
+      "has": [
+        {
+          "type": "query",
+          "key": "url",
+          "value": ".*yusuf\\.webp"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, noimageindex"
+        }
+      ]
+    },
+    {
+      "source": "/assets/yusuf.webp",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, noimageindex"
+        }
+      ]
+    }
+  ]
+}
