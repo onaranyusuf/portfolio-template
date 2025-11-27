@@ -31,6 +31,11 @@ const projects = [
     github: "https://github.com/onaranyusuf/portfolio-template",
   },
   {
+    name: "Kartalgoz AI",
+    image: "/assets/kartalgoz.webp",
+    link: "https://kartalgoz.com.tr/",
+  },  
+  {
     name: "Olympos Vita Nova Hotel",
     image: "/assets/vita_nova.webp",
     link: "https://olymposvitanovahotel.com/",
