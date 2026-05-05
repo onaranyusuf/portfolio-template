@@ -34,7 +34,12 @@ const projects = [
     name: "Kartalgoz AI",
     image: "/assets/kartalgoz.webp",
     link: "https://kartalgoz.com.tr/",
-  },  
+  },
+    {
+    name: "AloTeknik",
+    image: "/assets/aloteknik.webp",
+    link: "https://aloteknik.com/",
+  },
   {
     name: "Olympos Vita Nova Hotel",
     image: "/assets/vita_nova.webp",
