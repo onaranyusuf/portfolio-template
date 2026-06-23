@@ -26,5 +26,10 @@ const socials: Social[] = [
     link: 'https://github.com/onaranyusuf',
     logo: 'SvgoGithub',
   },
+  {
+    name: 'Email',
+    link: 'mailto:hello@yusufonaran.com',
+    logo: 'SvgoMail',
+  },
 ];
 </script>
