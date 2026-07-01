@@ -17,46 +17,80 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-gtag",
     "nuxt-schema-org",
-    "./modules/sitemap"
+    "./modules/sitemap",
   ],
 
   site: {
     url: "https://yusufonaran.com",
     name: "Yusuf Onaran",
-    description: "Yusuf Onaran – Fullstack Developer"
+    description: "Yusuf Onaran – Fullstack Developer",
   },
 
   app: {
     head: {
       meta: [
-        { property: 'og:title', content: 'Yusuf Onaran – Fullstack Developer' },
-        { property: 'og:site_name', content: 'Yusuf Onaran' },
-        { property: 'og:image', content: 'https://yusufonaran.com/og.png' },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Yusuf Onaran' },
-        { name: 'twitter:description', content: 'Fullstack Developer' },
-        { name: 'twitter:image', content: 'https://yusufonaran.com/og.png' },
+        { property: "og:title", content: "Yusuf Onaran – Fullstack Developer" },
+        { property: "og:site_name", content: "Yusuf Onaran" },
+        { property: "og:image", content: "https://yusufonaran.com/og.png" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Yusuf Onaran" },
+        { name: "twitter:description", content: "Fullstack Developer" },
+        { name: "twitter:image", content: "https://yusufonaran.com/og.png" },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'shortcut icon', href: '/favicon.ico' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/favicon-48x48.png' },
-        { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
-        { rel: 'icon', type: 'image/png', sizes: '128x128', href: '/favicon-128x128.png' },
-        { rel: 'icon', type: 'image/png', sizes: '196x196', href: '/favicon-196x196.png' },
-        { rel: 'apple-touch-icon', sizes: '192x192', href: '/android-chrome-192x192.png' },
-      ]
-    }
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "shortcut icon", href: "/favicon.ico" },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "48x48",
+          href: "/favicon-48x48.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "96x96",
+          href: "/favicon-96x96.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "128x128",
+          href: "/favicon-128x128.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "196x196",
+          href: "/favicon-196x196.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          sizes: "192x192",
+          href: "/android-chrome-192x192.png",
+        },
+      ],
+    },
   },
 
   gtag: {
     id: process.env.VITE_GA_ID,
     config: {
-      send_page_view: true
+      send_page_view: true,
     },
   },
 
@@ -69,7 +103,7 @@ export default defineNuxtConfig({
       cookieKey: "i18n_locale",
       fallbackLocale: "en",
       alwaysRedirect: false,
-      redirectOn: "root", 
+      redirectOn: "root",
     },
     locales: [
       {
@@ -91,6 +125,16 @@ export default defineNuxtConfig({
     fallback: "light",
   },
   svgo: {
-    autoImportPath: './assets/logo/',
-  }
+    autoImportPath: "./assets/logo/",
+  },
+
+  runtimeConfig: {
+    smtpHost: process.env.SMTP_HOST,
+    smtpPort: process.env.SMTP_PORT,
+    smtpUser: process.env.SMTP_USER,
+    smtpPass: process.env.SMTP_PASS,
+    mailFromAddress: process.env.MAIL_FROM_ADDRESS,
+    mailFromName: process.env.MAIL_FROM_NAME,
+    mailTo: process.env.MAIL_TO,
+  },
 });

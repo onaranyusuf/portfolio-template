@@ -10,8 +10,11 @@
     "email": "e-posta adresiniz",
     "message": "mesajınız",
     "send": "Gönder",
+    "sending": "Gönderiliyor...",
     "success": "Mesaj başarıyla gönderildi",
-    "error": "Mesaj gönderimi başarısız oldu!"
+    "error": "Mesaj gönderimi başarısız oldu!",
+    "alternativeTitle": "Diğer İletişim Kanalları",
+    "alternativeDescription": "Farklı bir yöntem mi tercih edersiniz?\nAşağıdaki platformlardan bana ulaşabilirsiniz."
   },
   "projects": {
     "title": "Projeler",

@@ -10,8 +10,11 @@
     "email": "e-mail address",
     "message": "message",
     "send": "Send",
+    "sending": "Sending...",
     "success": "Message sent successfully",
-    "error": "Message sent failed!"
+    "error": "Message sent failed!",
+    "alternativeTitle": "Other Ways to Connect",
+    "alternativeDescription": "Prefer a different channel?\nReach me through any of the platforms below."
   },
   "projects": {
     "title": "Projects",

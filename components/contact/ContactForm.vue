@@ -1,97 +1,109 @@
 <template>
-  <div class="contact-container">
-    <h2 class="header">
-      {{ t("contact.header") }}
-    </h2>
-    <form @submit.prevent="submitForm" class="contact-form">
-      <div class="form-group font-mono">
-        <input
-          id="name"
-          v-model="form.name"
-          type="text"
-          :placeholder="t('contact.name')"
-          :aria-label="t('contact.name')"
-          required
-        />
-      </div>
+  <form @submit.prevent="submitForm" class="contact-form">
+    <!-- Honeypot field - hidden from real users, bots fill it -->
+    <div class="honeypot" aria-hidden="true">
+      <label for="website">Website</label>
+      <input
+        id="website"
+        v-model="form.website"
+        type="text"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
 
-      <div class="form-group font-mono">
-        <input
-          id="email"
-          v-model="form.email"
-          type="email"
-          :placeholder="t('contact.email')"
-          :aria-label="t('contact.email')"
-          required
-        />
-      </div>
+    <div class="form-group font-mono">
+      <input
+        id="name"
+        v-model="form.name"
+        type="text"
+        :placeholder="t('contact.name')"
+        :aria-label="t('contact.name')"
+        required
+      />
+    </div>
 
-      <div class="form-group font-mono">
-        <textarea
-          id="message"
-          v-model="form.message"
-          :placeholder="t('contact.message')"
-          :aria-label="t('contact.message')"
-          :maxlength="maxMessageLength"
-          rows="5"
-          required
-        />
-        <div class="flex justify-between -mt-1.5">
-          <span class="text-gray-500 text-xs ml-1 justify-end flex">
-            {{ remainingCharacters }}
-          </span>
-          <div
-            v-if="errorMessage || successMessage"
-            :class="
-              errorMessage
-                ? 'text-red-500 dark:text-red-600'
-                : 'text-green-500 dark:text-green-800'
-            "
-            class="text-xs font-mono mr-1"
-          >
-            <p v-if="errorMessage">
-              {{ errorMessage }}
-            </p>
-            <p v-if="successMessage">
-              {{ successMessage }}
-            </p>
-          </div>
+    <div class="form-group font-mono">
+      <input
+        id="email"
+        v-model="form.email"
+        type="email"
+        :placeholder="t('contact.email')"
+        :aria-label="t('contact.email')"
+        required
+      />
+    </div>
+
+    <div class="form-group font-mono">
+      <textarea
+        id="message"
+        v-model="form.message"
+        :placeholder="t('contact.message')"
+        :aria-label="t('contact.message')"
+        :maxlength="maxMessageLength"
+        rows="5"
+        required
+      />
+      <div class="flex justify-between -mt-1.5">
+        <span class="text-gray-500 text-xs ml-1 justify-end flex">
+          {{ remainingCharacters }}
+        </span>
+        <div
+          v-if="errorMessage || successMessage"
+          :class="
+            errorMessage
+              ? 'text-red-500 dark:text-red-600'
+              : 'text-green-500 dark:text-green-800'
+          "
+          class="text-xs font-mono mr-1"
+        >
+          <p v-if="errorMessage">
+            {{ errorMessage }}
+          </p>
+          <p v-if="successMessage">
+            {{ successMessage }}
+          </p>
         </div>
       </div>
+    </div>
 
-      <div class="flex justify-end">
-        <button type="submit">
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  fill="currentColor"
-                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                ></path>
-              </svg>
-            </div>
+    <div class="flex justify-end">
+      <button type="submit" :disabled="isSubmitting">
+        <div class="svg-wrapper-1">
+          <div class="svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                fill="currentColor"
+                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+              ></path>
+            </svg>
           </div>
-          <span>{{ t("contact.send") }}</span>
-        </button>
-      </div>
-    </form>
-  </div>
+        </div>
+        <span>{{
+          isSubmitting ? t("contact.sending") : t("contact.send")
+        }}</span>
+      </button>
+    </div>
+  </form>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n();
 
-const formcarryUrl = import.meta.env.VITE_FORMCARRY_URL;
-
 const form = reactive<Record<string, string>>({
   name: "",
   email: "",
   message: "",
+  website: "", // Honeypot field
 });
+
+// Timestamp when form was rendered (for bot detection)
+const formLoadedAt = Date.now();
 
 const errorMessage = ref("");
 const successMessage = ref("");
+const isSubmitting = ref(false);
 
 const maxMessageLength = 500;
 const remainingCharacters = computed(() => {
@@ -104,24 +116,28 @@ const resetForm = () => {
 };
 
 const submitForm = async () => {
+  errorMessage.value = "";
+  successMessage.value = "";
+  isSubmitting.value = true;
+
   try {
-    const response = await fetch(formcarryUrl, {
+    await $fetch("/api/contact", {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+      body: {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+        website: form.website, // Honeypot
+        timestamp: formLoadedAt, // Form render time
       },
-      body: JSON.stringify(form),
     });
-    const data = await response.json();
-    if (data.code === 200) {
-      successMessage.value = t("contact.success");
-      resetForm();
-    } else {
-      errorMessage.value = t("contact.error");
-    }
+    successMessage.value = t("contact.success");
+    resetForm();
   } catch (error) {
     console.error(error);
+    errorMessage.value = t("contact.error");
+  } finally {
+    isSubmitting.value = false;
   }
 };
 </script>
@@ -129,16 +145,20 @@ const submitForm = async () => {
 <style scoped>
 @reference "~/assets/css/main.css";
 
-.contact-container {
-  @apply max-w-lg mx-auto px-6 bg-transparent;
-}
-
-.header {
-  @apply text-base font-light text-center text-gray-800 dark:text-gray-700 mb-4;
-}
-
 .contact-form {
   @apply space-y-4 bg-transparent;
+}
+
+/* Honeypot - hidden from real users, visible to bots */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-group {
@@ -193,6 +213,12 @@ button:hover {
 button:active {
   transform: scale(0.96);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 button span {
