@@ -1,4 +1,2 @@
 User-Agent: *
 Allow: /
-Disallow: /assets/yusuf.webp
-Sitemap: https://yusufonaran.com/sitemap.xml

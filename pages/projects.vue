@@ -83,7 +83,7 @@ const schemaCollectionPage = {
   "@type": "CollectionPage",
   "name": "Projects – Yusuf Onaran",
   "description": "A curated collection of web applications and digital experiences by fullstack developer Yusuf Onaran.",
-  "url": "https://yusufonaran.com/projects",
+  "url": "https://portfolio-template.yusufonaran.com/projects",
   "inLanguage": "en-US"
 }
 
@@ -91,7 +91,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://yusufonaran.com/projects"
+      href: "https://portfolio-template.yusufonaran.com/projects"
     }
   ],
   script: [

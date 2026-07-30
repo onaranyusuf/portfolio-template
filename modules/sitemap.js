@@ -12,7 +12,7 @@ export default defineNuxtModule({
     compatibility: { nuxt: '^3.0.0-rc.11' },
   },
   defaults: {
-    hostname: 'https://yusufonaran.com',
+    hostname: 'https://portfolio-template.yusufonaran.com',
   },
   async setup(options, nuxt) {
     async function generateSitemap(routes) {

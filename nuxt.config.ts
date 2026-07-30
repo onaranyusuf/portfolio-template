@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   ],
 
   site: {
-    url: "https://yusufonaran.com",
+    url: "https://portfolio-template.yusufonaran.com",
     name: "Yusuf Onaran",
     description: "Yusuf Onaran – Fullstack Developer",
   },
@@ -31,13 +31,19 @@ export default defineNuxtConfig({
       meta: [
         { property: "og:title", content: "Yusuf Onaran – Fullstack Developer" },
         { property: "og:site_name", content: "Yusuf Onaran" },
-        { property: "og:image", content: "https://yusufonaran.com/og.png" },
+        {
+          property: "og:image",
+          content: "https://portfolio-template.yusufonaran.com/og.png",
+        },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Yusuf Onaran" },
         { name: "twitter:description", content: "Fullstack Developer" },
-        { name: "twitter:image", content: "https://yusufonaran.com/og.png" },
+        {
+          name: "twitter:image",
+          content: "https://portfolio-template.yusufonaran.com/og.png",
+        },
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

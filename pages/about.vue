@@ -63,11 +63,11 @@ useSeoMeta({
 const schema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://yusufonaran.com/about",
+  "@id": "https://portfolio-template.yusufonaran.com/about",
   name: "About – Yusuf Onaran",
   description:
     "Learn more about Yusuf Onaran, a passionate fullstack developer skilled in Vue.js, Nuxt.js, React, and modern web technologies.",
-  url: "https://yusufonaran.com/about",
+  url: "https://portfolio-template.yusufonaran.com/about",
   inLanguage: "en-US",
 };
 
@@ -75,7 +75,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://yusufonaran.com/about",
+      href: "https://portfolio-template.yusufonaran.com/about",
     },
   ],
   script: [

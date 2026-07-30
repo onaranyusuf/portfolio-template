@@ -167,7 +167,7 @@ export default defineEventHandler(async (event) => {
             <td style="background-color:#f9fafb;padding:24px 40px;border-top:1px solid #f3f4f6;text-align:center;">
               <p style="margin:0;color:#9ca3af;font-size:13px;">
                 This message was sent from the contact form on
-                <a href="https://yusufonaran.com" style="color:#da6a6a;text-decoration:none;font-weight:500;">yusufonaran.com</a>
+                <a href="https://portfolio-template.yusufonaran.com" style="color:#da6a6a;text-decoration:none;font-weight:500;">portfolio-template.yusufonaran.com</a>
               </p>
               <p style="margin:8px 0 0;color:#d1d5db;font-size:12px;">
                 Sent at ${new Date().toLocaleString("en-US", { dateStyle: "full", timeStyle: "short" })}
